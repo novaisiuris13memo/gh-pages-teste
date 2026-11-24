@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste GitHub Pages</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --accent: #1f883d;
+      --border: #d1d9e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --text: #e6edf3;
+        --muted: #9198a1;
+        --accent: #3fb950;
+        --border: #30363d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    h1 { margin: 12px 0 8px; font-size: 28px; }
+    p { margin: 0 0 20px; color: var(--muted); line-height: 1.5; }
+    dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 16px;
+      margin: 0;
+      font-size: 14px;
+    }
+    dt { color: var(--muted); }
+    dd { margin: 0; font-family: ui-monospace, Consolas, monospace; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge"><span class="dot"></span>No ar</span>
+    <h1>GitHub Pages funcionando</h1>
+    <p>Página de exemplo publicada com Git + GitHub CLI para testar a integração.</p>
+    <dl>
+      <dt>Host</dt><dd id="host">—</dd>
+      <dt>Aberta em</dt><dd id="now">—</dd>
+    </dl>
+  </main>
+  <script>
+    document.getElementById('host').textContent = location.host || 'arquivo local';
+    document.getElementById('now').textContent = new Date().toLocaleString('pt-BR');
+  </script>
+</body>
+</html>
